@@ -3,14 +3,18 @@
 from os import system
 
 def print_board(board):
-    print(board['WN']+'|'+board['NN']+'|'+board['EN'])
-    print('-+-+-')
-    print(board['WW']+'|'+board['CC']+'|'+board['EE'])
-    print('-+-+-')
-    print(board['WS']+'|'+board['SS']+'|'+board['ES'])
-
+    """绘制井字棋棋盘的类"""
+    cut_line = ' -+-+-'
+    print(cut_line)
+    print('|'+board['1']+'|'+board['2']+'|'+board['3']+'|')
+    print(cut_line)
+    print('|'+board['4']+'|'+board['5']+'|'+board['6']+'|')
+    print(cut_line)
+    print('|'+board['7']+'|'+board['8']+'|'+board['9']+'|')
+    print(cut_line)
 
 def is_player_win(board, player):
+    """判断玩家是否符合胜利条件"""
     pieces = list(board.values())  # 将棋盘字典的值存为列表
     pla_had = []  # 存储玩家占下的格子数
     win_had = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]  # 获胜条件
@@ -31,9 +35,9 @@ def is_player_win(board, player):
 def main():
     print('新的一局井字棋开始了，九格占满后游戏结束')
     init_board = {
-        'WN': 'WN', 'NN': 'NN', 'EN': 'EN',
-        'WW': 'WW', 'CC': 'CC', 'EE': 'EE',
-        'WS': 'WS', 'SS': 'SS', 'ES': 'ES'
+        '1': '1', '2': '2', '3': '3',
+        '4': '4', '5': '5', '6': '6',
+        '7': '7', '8': '8', '9': '9'
     }
     begin = True
     while begin:
