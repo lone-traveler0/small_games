@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # 井字棋游戏
-from os import system
+
 
 def print_board(board):
     """绘制井字棋棋盘的类"""
@@ -12,6 +12,7 @@ def print_board(board):
     print(cut_line)
     print('|'+board['7']+'|'+board['8']+'|'+board['9']+'|')
     print(cut_line)
+
 
 def is_player_win(board, player):
     """判断玩家是否符合胜利条件"""
